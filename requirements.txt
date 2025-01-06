@@ -6,3 +6,4 @@ cloudpickle
 dill
 flask
 gunicorn
+psycopg2
