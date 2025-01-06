@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Make a Prediction</h1>
+<form method="POST">
+    <label for="CreditScore">Credit Score (350-850):</label>
+    <input type="number" name="CreditScore" min="350" max="850" required><br><br>
+
+    <label for="Geography">Geography:</label>
+    <select name="Geography" required>
+        <option value="France">France</option>
+        <option value="Spain">Spain</option>
+        <option value="Germany">Germany</option>
+    </select><br><br>
+
+    <label for="Gender">Gender:</label>
+    <select name="Gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br><br>
+
+    <label for="Age">Age (18-92):</label>
+    <input type="number" name="Age" min="18" max="92" required><br><br>
+
+    <label for="Tenure">Tenure (0-10):</label>
+    <input type="number" name="Tenure" min="0" max="10" required><br><br>
+
+    <label for="Balance">Balance (0-250898.09):</label>
+    <input type="number" name="Balance" min="0" max="250898.09" step="0.01" required><br><br>
+
+    <label for="NumOfProducts">Number of Products (1-4):</label>
+    <input type="number" name="NumOfProducts" min="1" max="4" required><br><br>
+
+    <label for="HasCrCard">Has Credit Card (0 or 1):</label>
+    <select name="HasCrCard" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br><br>
+
+    <label for="IsActiveMember">Is Active Member (0 or 1):</label>
+    <select name="IsActiveMember" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br><br>
+
+    <label for="EstimatedSalary">Estimated Salary (90.07 - 199992.48):</label>
+    <input type="number" name="EstimatedSalary" min="90.07" max="199992.48" step="0.01" required><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<p>{{ prediction }}</p>
+{% endif %}
+{% endblock %}

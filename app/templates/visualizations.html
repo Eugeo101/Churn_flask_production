@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Visualizations</h1>
+<div class="visualization">
+    <img src="{{ url_for('static', filename='images/visual1.png') }}" alt="Visualization 1">
+    <img src="{{ url_for('static', filename='images/visual2.png') }}" alt="Visualization 2">
+    <img src="{{ url_for('static', filename='images/visual3.png') }}" alt="Visualization 3">
+    <img src="{{ url_for('static', filename='images/visual4.png') }}" alt="Visualization 4">
+</div>
+{% endblock %}
