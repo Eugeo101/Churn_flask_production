@@ -5,3 +5,4 @@ numpy
 cloudpickle
 dill
 flask
+gunicorn
